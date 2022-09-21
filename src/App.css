@@ -1,38 +1,93 @@
-.App {
+.link {
+  color: #61dafb;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: inherit;
+  text-decoration: underline;
+}
+.navigation {
+  background-color: black;
+  margin-bottom: 32px;
+  width: 100%;
+  padding: 24px;
+}
+
+.navigation a {
+  margin: 0 32px;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.txt-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading-2 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin: 0 0 16px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  border-radius: 8px;
+  padding: 32px;
+  background-color: black;
+  width: max-content;
+  border: 1px solid #61dafb;
+  margin: 0 auto;
 }
 
-.App-header {
+.field-block {
+  margin-bottom: 24px;
+}
+
+.field-block label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field-block input {
+  border: 1px solid #61dafb;
+  height: 40px;
+  font-size: 18px;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: aliceblue;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.field-block button {
+  border: 1px solid #61dafb;
+  font-size: 24px;
+  background-color: #61dafb;
+  color: #282c34;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tbl-avtr {
+  width: 50px;
+  border-radius: 50px;
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl tr {
+  border-bottom: 1px solid #61dafb;
+}
+
+.tbl td {
+  padding: 8px;
+}
+
+.tbl td .link {
+  margin: 0 16px;
 }
