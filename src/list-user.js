@@ -4,24 +4,22 @@ function ListUser() {
 
   const [user, setUser] = useState([]);
 
-  const getData = () => {
-    fetch('https://62b4742fa36f3a973d3473d0.mockapi.io/api/users')
-    .then((res) => res.json())
-    .then((result) => {
-      setUser(result)
-    })
+  const getUsers = async () => {
+    const response = await fetch('https://62b4742fa36f3a973d3473d0.mockapi.io/api/users')
+    const json = await response.json()
+    setUser(json)
   }
 
   const onDelete = (id) => {
-    console.log(id)
     fetch(`https://62b4742fa36f3a973d3473d0.mockapi.io/api/users/${id}`, {method: 'DELETE'})
     .then(
-      getData
+      getUsers()
       )
   }
 
   useEffect(() => {
-    getData()
+    getUsers()
+    .catch(console.error)
   }, [user])
   
   return (
@@ -52,7 +50,6 @@ function ListUser() {
               <td>{user.userRole}</td>
               <td>
                 <a href={`http://localhost:3000/edit-user/${user.id}`} className="link">Edit</a>
-                {/* <a href={`http://localhost:3000/delete-user/${user.id}`} className="link">Delete</a> */}
                 <button className="link" onClick={() => onDelete(user.id)}>Delete</button>
               </td>
             </tr>

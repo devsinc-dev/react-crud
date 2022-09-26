@@ -21,9 +21,8 @@ function EditUser() {
     .then((res) => res.json())
     .then((result) => {
       setUser(result)
-      console.log(result)
     })
-  }, [userId])
+  }, [])
 
   const SubmitHandler = () => {
     fetch(`https://62b4742fa36f3a973d3473d0.mockapi.io/api/users/${userId}`, {
